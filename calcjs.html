@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número com JS</title>
+    <style>
+        button{
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vários Cálculos Com JS</h1>
+
+    <button id="clicar">Clique para calcular</button>
+
+    <p id="p1">O resultado vai aparecer aqui...</p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+
+   <script>
+       let btnClicar = document.getElementById("clicar")
+       let p1 = document.getElementById("p1");
+       let p2 = document.getElementById("p2");
+       let p3 = document.getElementById("p3");
+       let p4 = document.getElementById("p4");
+       let p5 = document.getElementById("p5");
+       let p6 = document.getElementById("p6");
+       let p7 = document.getElementById("p7");
+       let p8 = document.getElementById("p8");
+
+       btnClicar.addEventListener('click', function(){
+
+           let num = Number(window.prompt("Digite Um Número"));
+           p1.innerHTML = `<p>O número a ser analisado aqui será o  <strong>${num}</strong></p><hr>`
+           p2.innerHTML = `<p>O seu valor absoluto é <strong>${Math.abs(num)}</strong></p>`
+           p3.innerHTML = `<p>A sua parte inteira é <strong>${Math.trunc(num)}</strong></p>`
+           p4.innerHTML = `<p>O valor inteiro mais próximo é <strong>${Math.round(num)}</strong></p>`
+           p5.innerHTML = `<p>A sua raiz quadrada é <strong>${Math.sqrt(num)}</strong></p>`
+           p6.innerHTML = `<p>A sua raiz cúbica é <strong>${Math.cbrt(num)}</strong></p>`
+           p7.innerHTML = `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}<strong></strong></p>`
+           p8.innerHTML = `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}<strong></strong></p>`
+       })
+   </script>
+</body>
+</html>

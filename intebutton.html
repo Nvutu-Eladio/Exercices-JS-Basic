@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com JS</title>
+    
+    <style>
+        button{
+            background-color: aqua;
+            padding: 40px; 
+        }
+        button:hover{
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interagindo com um botão</h1>
+
+    <button id="clicar">Clique Em Mim</button>
+
+    <script>
+        let btnClicar = document.getElementById("clicar");
+        
+        btnClicar.addEventListener('click',function(){
+
+            alert("Você clicou no botão!")
+        })
+    </script>
+</body>
+</html>

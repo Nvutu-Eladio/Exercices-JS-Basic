@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number with JS</title>
+
+    <style>
+        button{
+            padding: 50px;
+        }
+    </style>
+
+    <script>
+        alert("Seja Bem-vindo(a) ao meu site")
+    </script>
+</head>
+<body>
+    <h1>Trabalhando Com Números</h1>
+
+    <button id="clicar">Clique Para Calcular</button>
+
+    <p id="p1">O resultado vem aqui...</p>
+
+    <script>
+        let btnClicar = document.getElementById("clicar");
+        let p1 = document.getElementById("p1");
+
+        btnClicar.addEventListener('click',function(){
+
+            let n1 = window.prompt("Digite Um Numero.")
+
+            p1.innerHTML = `O dobro de ${n1} é ${n1*2} e a metade é ${n1/2}!`
+        })
+
+    </script>
+</body>
+</html>

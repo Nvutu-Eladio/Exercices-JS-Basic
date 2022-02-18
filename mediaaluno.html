@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número com JS</title>
+
+    <style>
+        button{
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Media do aluno</h1>
+
+    <button id="clicar">Calcular Média</button>
+
+    <p id="p1">O resultado vai aparecer aqui...</p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+
+    <script>
+        let btnClicar = document.getElementById("clicar");
+        let p1 = document.getElementById("p1");
+        let p2 = document.getElementById("p2");
+        let p3 = document.getElementById("p3");
+
+        btnClicar.addEventListener('click',function(){
+            let nome = window.prompt("Digite o seu nome")
+            let n1 = Number(window.prompt("Informe a sua primeira nota"));
+            let n2 = Number(window.prompt("Informe a sua segunda nota"));
+            notaFinal = (n1+n2)/2;
+
+            p1.innerHTML = `Calculando a nota final de <mark>${nome}</mark>`
+            p2.innerHTML = `As notas obtidas foram <mark>${n1} e ${n2}</mark>`
+            p3.innerHTML = `A média final será <mark>${notaFinal}</mark>`
+        })
+    </script>
+
+</body>
+</html>
